@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Wiki &lt;Gallery&gt; Translation Tool</title>
+</head>
+
+<body>
+    <h1>Wiki &lt;Gallery&gt; Translation Tool</h1>
+    <div id="src_input">
+        <div id="inputarea_en" class="floating_blocks">
+            <h2>Wiki source code from EN</h2>
+            <textarea id="wikisrc_en" placeholder="Text from EN" class="input_region" rows="20"></textarea>
+        </div>
+        <div id="inputarea_zh" class="floating_blocks">
+            <h2>Wiki source code from ZH</h2>
+            <textarea id="wikisrc_zh" placeholder="Text from ZH" class="input_region" rows="20"></textarea>
+        </div>
+    </div>
+    <div id="ctrlarea">
+        <input id="submit_compare" type="button" value="Compare" onclick="buttonCompare()" />
+        <input id="submit_export" type="button" value="Export" onclick="buttonExport()" style="display: none" />
+        <input id="text_wikilink" type="url" placeholder="Move page link of a wiki" value="https://minecraft-zh.gamepedia.com/Special:MovePage/"
+        />
+    </div>
+    <div id="src_output" style="display: none">
+        <div id="outputarea" class="floating_blocks">
+            <h2>Wiki source output</h2>
+            <textarea id="wikisrc_export" class="output_region" rows="20"></textarea>
+        </div>
+        <div id="renamearea" class="floating_blocks">
+            <h2>File rename links</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Link</th>
+                        <th>To</th>
+                    </tr>
+                </thead>
+                <tbody id="rename_links"></tbody>
+            </table>
+        </div>
+    </div>
+    <div id="compare_section" style="display: none">
+        <h2>Compare Results</h2>
+        <div id="compare_output">
+            <div id="result_match">
+                <h3>Matched Entries</h3>
+                <table id="match_table">
+                    <thead>
+                        <tr>
+                            <th>Filename</th>
+                            <th>Caption EN</th>
+                            <th>Caption ZH</th>
+                        </tr>
+                    </thead>
+                    <tbody id="match_entries"></tbody>
+                </table>
+            </div>
+            <div id="result_unmatch_en">
+                <h3>Entries from EN</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Filename</th>
+                            <th>Caption</th>
+                        </tr>
+                    </thead>
+                    <tbody id="unmatch_entries_en"></tbody>
+                </table>
+            </div>
+            <div id="result_unmatch_zh">
+                <h3>Entries from ZH</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Filename</th>
+                            <th>Caption</th>
+                        </tr>
+                    </thead>
+                    <tbody id="unmatch_entries_zh"></tbody>
+                </table>
+            </div>
+        </div>
+        <div><input id="submit_rematch" type="button" value="Re-match" onclick="buttonRematch()" /></div>
+    </div>
+    <div id="rematch_section" style="display: none">
+        <h2>Manual Matchings</h2>
+        <table id="rematch_table">
+            <thead>
+                <tr>
+                    <th>Filename EN</th>
+                    <th>Caption EN</th>
+                    <th>Caption ZH</th>
+                </tr>
+            </thead>
+            <tbody id="rematch_entries"></tbody>
+        </table>
+        <h2>File Renames</h2>
+        <table id="rename_table">
+            <thead>
+                <tr>
+                    <th>From ZH</th>
+                    <th>To EN</th>
+                </tr>
+            </thead>
+            <tbody id="rename_entries"></tbody>
+        </table>
+    </div>
+</body>
+<script src="js/interface.js"></script>
+<script src="js/galleryCompare.js"></script>
+<script src="js/galleryDisplay.js"></script>
+<script src="js/galleryGenerate.js"></script>
+
+<link href="style.css" type="text/css" rel="stylesheet" />
+
+</html>

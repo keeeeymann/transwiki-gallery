@@ -1,0 +1,46 @@
+.floating_blocks {
+	float: left;
+	min-width: 50%;
+	height: 400px;
+}
+.input_region {
+	width: 95%;
+}
+.output_region {
+	width: 95%;
+}
+#text_wikilink {
+    width: 50%;
+}
+#ctrlarea {
+    width: 50%;
+}
+tr {
+	vertical-align: top;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-width: thin;
+}
+td {
+	padding: 3px;
+}
+th {
+	text-align: left;
+}
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+.item_filename {
+	width: 20%;
+	word-break: break-all;
+}
+.item3 {
+	width: 40%;
+}
+.item2 {
+	width: 80%;
+}
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
