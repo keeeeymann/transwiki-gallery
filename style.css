@@ -1,13 +1,23 @@
+#src_input {
+	height: 70vh;
+	overflow: auto;
+}
+#src_output {
+	height: 70vh;
+	overflow: auto;
+}
 .floating_blocks {
 	float: left;
-	min-width: 50%;
-	height: 400px;
+	width: 50%;
+	height: 80%;
 }
 .input_region {
 	width: 95%;
+	height: 100%;
 }
 .output_region {
 	width: 95%;
+	height: 100%;
 }
 #text_wikilink {
     width: 50%;
